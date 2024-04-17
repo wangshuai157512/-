@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!-- <link rel="icon" href="./dark.svg"> -->
+    <!-- <title><%= htmlWebpackPlugin.options.title %></title> -->
+  </head>
+  <style>
+    .sidebar-container {
+      height: 100%;
+      margin: 0px;
+      padding: 0px;
+      /*隐藏滚动条，当IE下溢出，仍然可以滚动*/
+      -ms-overflow-style: none;
+      /*火狐下隐藏滚动条*/
+      overflow: -moz-scrollbars-none;
+    }
+
+    .chromeframe {
+      margin: 0.2em 0;
+      background: #ccc;
+      color: #000;
+      padding: 0.2em 0;
+    }
+
+    :not(.el-table__body-wrapper)::-webkit-scrollbar {
+      display: none;
+    }
+
+    #loader-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 999999;
+      background: #001731;
+    }
+
+    .loading {
+      position: absolute;
+      width: 80px;
+      height: 40px;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+    .loading span {
+      display: inline-block;
+      width: 8px;
+      height: 100%;
+      border-radius: 4px;
+      background: lightgreen;
+      animation: load 1s ease infinite;
+      -moz-animation: load 1s ease infinite;
+      -o-animation: load 1s ease infinite;
+      -ms-animation: load 1s ease infinite;
+      -webkit-animation: load 1s ease infinite;
+    }
+
+    @-webkit-keyframes load {
+      0%,
+      100% {
+        height: 40px;
+        background: lightgreen;
+      }
+      50% {
+        height: 70px;
+        margin: -15px 0;
+        background: lightblue;
+      }
+    }
+
+    @keyframes load {
+      0%,
+      100% {
+        height: 40px;
+        background: lightgreen;
+      }
+      50% {
+        height: 70px;
+        margin: -15px 0;
+        background: lightblue;
+      }
+    }
+
+    .loading span:nth-child(2) {
+      animation-delay: 0.2s;
+      -webkit-animation-delay: 0.2s;
+      -moz-animation-delay: 0.2s;
+      -o-animation-delay: 0.2s;
+      -ms-animation-delay: 0.2s;
+    }
+
+    .loading span:nth-child(3) {
+      animation-delay: 0.4s;
+      -webkit-animation-delay: 0.4s;
+      -moz-animation-delay: 0.4s;
+      -o-animation-delay: 0.4s;
+      -ms-animation-delay: 0.4s;
+    }
+
+    .loading span:nth-child(4) {
+      animation-delay: 0.6s;
+      -webkit-animation-delay: 0.6s;
+      -moz-animation-delay: 0.6s;
+      -o-animation-delay: 0.6s;
+      -ms-animation-delay: 0.6s;
+    }
+
+    .loading span:nth-child(5) {
+      animation-delay: 0.8s;
+      -webkit-animation-delay: 0.8s;
+      -moz-animation-delay: 0.8s;
+      -o-animation-delay: 0.8s;
+      -ms-animation-delay: 0.8s;
+    }
+
+    @media print {
+      .Noprint {
+        display: none;
+      }
+      .PageNext {
+        page-break-after: always;
+      }
+    }
+  </style>
+  <body>
+    <object classid="clsid:5EB842AE-5C49-4FD8-8CE9-77D4AF9FD4FF" id="IdrControl1" style="display: none; visibility: hidden"></object>
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <script>
+      document.title ="驾驶人考试缴费核验系统"
+    </script>
+  </body>
+</html>
